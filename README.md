@@ -1,2 +1,2 @@
 # Admin-Dashboard
-Demo for an admin dashboard 
+Demo for an admin dashboard.

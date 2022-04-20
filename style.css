@@ -1,0 +1,455 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    background: none;
+    outline: none;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+    -webkit-appearance: none;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+:root
+{
+    --main-color: rgb(255, 138, 60);
+    --secondary-color: rgb(255, 205, 138);
+    --font-color-dark: rgb(49, 37, 34);
+    --font-color-light: white;
+}
+
+.container
+{
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 4fr;
+    height: 100%;
+}
+
+.header, .announceBoxesContainer, .trendingBox, .projectBox
+{
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.15));
+}
+
+.header
+{
+    background-color: rgb(255, 255, 255);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    height: 20vh;
+    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.headerRow1
+{
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchBarContainer
+{
+    padding-left: 30px;
+}
+
+#searchBarForm
+{
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+#searchBarForm>label:hover, .notifBell:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#searchBar
+{
+    background-color: rgb(201, 208, 219);
+    border-radius: 30px;
+    width: 900px;
+    padding-left: 20px;
+    
+}
+
+#searchBar:focus
+{
+    background-color: rgb(209, 219, 235);
+    transform: scale(1.01);
+}
+
+.accNameSection
+{
+    display: flex;
+    align-items: center;
+    padding-right: 100px;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font-color-dark);
+    cursor: pointer;
+}
+
+
+.accIconNotif
+{
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+.headerRow2
+{
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.greetingContainer
+{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: bold;
+    color: var(--font-color-dark);
+    
+}
+.greetingText
+{
+    padding-left: 20px;
+}
+.greetingHi
+{
+    font-size: 15px;
+    
+}
+
+.userName
+{
+    font-size: 25px;
+    
+}
+
+.accIconGreeting
+{
+    max-width: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fileButtonContainer
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 60px;
+}
+
+.fileButton
+{
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+}
+
+.fileButton:hover
+{
+    background-color: rgb(255, 122, 33);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.sidebar
+{
+    background-color: var(--main-color);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.dashboard
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboardTitle
+{
+    display: flex;
+    align-items: center;
+    color: var(--font-color-light);
+    font-size: 40px;
+    font-weight: bold;
+    gap: 10px;
+    padding-left: 30px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.dashboardTitle>img
+{
+    width: 70px;
+}
+
+
+.dashboardList1
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.dashboardList1,.dashboardList2
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.dashboardList1>button, 
+.dashboardList2>button
+{
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--font-color-light);
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding-left: 70px;
+    cursor: pointer;
+}
+
+.dashboardList1>button>img, 
+.dashboardList2>button>img, 
+.dashboardTitle>img
+{
+    filter: brightness(0) invert(1);
+}
+
+.dashboardList1>button:hover, 
+.dashboardList2>button:hover,
+.dashboardTitle:hover
+{
+    filter: invert(50%) sepia(20%) saturate(4000%) hue-rotate(350deg) brightness(80%) ;
+}
+
+.creditsFooter
+{
+    color: white;
+    padding-left: 50px;
+    padding-top: 400px;
+}
+
+.creditsFooter>a
+{
+    color: white;
+    font-weight: bold;
+}
+
+.creditsFooter>a:hover
+{
+    color: rgb(114, 51, 0);
+}
+
+.main
+{
+    background-color: var(--secondary-color);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template: repeat(2, 1fr) / 3fr 1fr;
+    padding-top: 30px;
+    padding-left: 20px;
+
+    gap: 20px;
+
+}
+
+.yourProjectsContainer
+{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    padding-left: 60px;
+}
+
+
+.announcementsContainer
+{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.announcementsContainer>div, .trendingContainer>div, .yourProjectsContainer>div
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font-color-dark);
+    padding-bottom: 10px;
+}
+
+.announceBoxesContainer
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 320px;
+    border-radius: 5%;   
+}
+
+.announceBoxesContainer>div:nth-child(2)
+{
+    border-top: 1px solid rgb(212, 212, 212);
+    border-bottom: 1px solid rgb(212, 212, 212);
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.announceBox
+{
+    width: 80%;
+}
+
+.announceTitle, .trendingUserName
+{
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.announceDesc, .trendingUserDesc
+{
+    font-size: 13px;
+    color: rgb(100, 88, 88);
+}
+
+
+.trendingBox
+{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    border-radius: 5%;   
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.trendingName
+{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+
+.trendingIcon
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.projectBoxesContainer
+{
+    display: grid;
+    grid-template: repeat(3, minmax(200px, 210px)) 
+    / repeat(2, minmax(200px, 450px));
+    gap: 25px;
+}
+
+.projectBox
+{
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.projectBox>div:first-child
+{
+    width: 80%;
+    padding-left: 50px;
+    padding-top: 40px;
+    height: 65%;
+}
+
+.sideLine
+{
+    height: 300px;
+    background-color: var(--main-color);
+    width: 50px;
+    position: relative;
+    bottom: 220px;
+    right: 40px;
+}
+
+
+.projectName
+{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.projectDesc
+{
+    font-size: 15px;
+    color: rgb(100, 88, 88);
+}
+
+.projectIcons
+{
+    display: flex;
+    gap: 30px;
+    padding-left: 280px;
+    padding-top: 25px;
+}
+
+.projectIcons>img:hover
+{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.projectName:hover, .announceTitle:hover, 
+.trendingUserName:hover
+{
+    color: var(--main-color);
+}
+
+.yourProjectsContainer>div:first-child
+{
+    padding-bottom: 20px;
+}
+
+
